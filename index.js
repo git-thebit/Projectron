@@ -52,4 +52,5 @@ function addBoards(){
     +'</div>'
     '<div class="project-block-holder" id="projectList"><"/div>'+
     '</section>';
+    document.getElementById('boardBlockList');
 }
