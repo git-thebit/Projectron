@@ -17,15 +17,10 @@
                 <div class="board-container">
                     <div class="add-board-block">
                         <input type="text" placeholder="eg.. Name of the board">
-                        <button class="round-button">Add Board</button>
+                        <button class="round-button" onclick="addBoard()">Add Board</button>
                     </div>
-                    <section>
-                        <div>Boards
-                            <button onclick="removeCards()">Remove Cards</button>
-                        </div>
-                        <div class="project-block-holder" id='projectList'>
-                        </div>
-                    </section>
+                    <div id="boardBlockList">
+                    </div>
                     </div>
             </div>
             <script src="./index.js"></script>    

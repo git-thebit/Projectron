@@ -43,3 +43,17 @@ function removeCards()
 {
     document.getElementById('projectList').innerHTML='';
 }
+
+//adding boards
+
+function addBoards(){
+    <section>
+    <div>Boards
+        <button onclick="removeCards()">Remove Cards</button>
+    </div>
+    <div class="project-block-holder" id='projectList'>
+    </div>
+    </section>
+
+
+}
