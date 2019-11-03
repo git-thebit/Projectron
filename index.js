@@ -47,13 +47,9 @@ function removeCards()
 //adding boards
 
 function addBoards(){
-    <section>
-    <div>Boards
-        <button onclick="removeCards()">Remove Cards</button>
-    </div>
-    <div class="project-block-holder" id='projectList'>
-    </div>
-    </section>
-
-
+    var templateBlock='<section class="board-block">'+
+    '<div>Boards<button onclick="removeCards()">Remove Cards</button>'
+    +'</div>'
+    '<div class="project-block-holder" id="projectList"><"/div>'+
+    '</section>';
 }
