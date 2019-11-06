@@ -4,7 +4,7 @@
         <meta charset="utf-8"/>
         <meta http-equiv="X-UA_Compatible" content="IE-edge">
         <title>Home page</title>
-        <meta name="viewport" content="width-device-width,initial-scale=1">
+        <meta name="viewport" content="width=device-width,initial-scale=1">
         <link rel="stylesheet" type="text/css" media="screen" href="home.css">
     </head> 
     <body>
@@ -15,11 +15,13 @@
         <div class="container">
                 <div class="menu-block" id="menu"></div>
                 <div class="board-container">
+                    
                     <div class="add-board-block">
-                        <input type="text" placeholder="eg.. Name of the board">
-                        <button class="round-button" onclick="addBoard()">Add Board</button>
+                        <input type="text" id="newBoardText" value="" placeholder="eg.. Name of the board">
+                        <button class="round-button" onclick="addBoard(newBoardText)">Add Board</button>
                     </div>
-                    <div id="boardBlockList">
+                    <div id="boardBlockList"></div>
+
                     </div>
                     </div>
             </div>

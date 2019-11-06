@@ -1,8 +1,19 @@
-//This is for adding new project cards on the project-block-holder
+addBoard();
+function addBoard(id){
+    console.log(id);
+    var tempBlock='<section class="board-block">'+
+    '<div>Boards'+
+        '<button onclick="removeCards()">Remove Cards</button>'+
+    '</div>'+
+    '<div class="project-block-holder" id="projectList">'
+    +'</div>'+
+'</section>'
+document.getElementById('boardBlockList').innerHTML+=tempBlock;
+};
 
 var projectListObject=[                                             
     {                                                                                   
-        name:'Project CardiB'                                                           
+        name:'Project CardiB'                                               //This block is for adding new project cards on the project-block-holder           
     },                                                                      //Array for projects name value data etc
     {
         name:'Project Nicki Minaj'
@@ -36,21 +47,10 @@ function toggleMenu(){
         toggleVariable.style.display='none';
     }
  
-}
+};
 
 //remove cards function
 function removeCards()
 {
     document.getElementById('projectList').innerHTML='';
-}
-
-//adding boards
-
-function addBoards(){
-    var templateBlock='<section class="board-block">'+
-    '<div>Boards<button onclick="removeCards()">Remove Cards</button>'
-    +'</div>'
-    '<div class="project-block-holder" id="projectList"><"/div>'+
-    '</section>';
-    document.getElementById('boardBlockList')
-}
+};
