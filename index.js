@@ -2,7 +2,7 @@ addBoard();
 function addBoard(id){
     console.log(id);
     var tempBlock='<section class="board-block">'+
-    '<div>Boards'+
+    '<div>'+id.value+
         '<button onclick="removeCards()">Remove Cards</button>'+
     '</div>'+
     '<div class="project-block-holder" id="projectList">'
@@ -23,6 +23,8 @@ var projectListObject=[
     }   
 ]; 
 showProjects();
+
+
 function showProjects(){
 
 projectListObject.forEach(function(value,index){
