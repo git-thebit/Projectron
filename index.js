@@ -13,7 +13,11 @@ function addBoard(id){
 '</section>'
 document.getElementById('boardBlockList').innerHTML+=tempBlock;
 showProjects(listID);
+document.getElementById('menuList').innerHTML+='<li onclick="loadMenu('+listID+')">'+id.value+'<li>';
 };
+
+
+
 
 var projectListObject=[                                             
     {                                                                                   
@@ -27,6 +31,10 @@ var projectListObject=[
     }   
 ]; 
 showProjects();
+
+function loadMenu(element){
+    console.log(element.id);     
+}
 
 
 function showProjects(listID){
@@ -42,7 +50,7 @@ if(listID){
     document.getElementById(listID).innerHTML+=template;
 }
 else{
-   document.getElementById('projectList').innerHTML+=template;
+  // document.getElementById('projectList').innerHTML+=template;
 }
 });
 
@@ -60,7 +68,7 @@ function toggleMenu(){
 };
 
 //remove cards function
-function removeCards(id)
+function removeCards(element)
 {
-    document.getElementById(id).innerHTML='';
+    document.getElementById(element.id).innerHTML='';
 };
