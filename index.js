@@ -1,22 +1,22 @@
 //addBoard();
 
-var idName=1;
+var idName=0;
 function addBoard(id){
     idName ++;
     var listID='projectList'+'_'+idName;
-    var tempBlock='<section class="board-block">'+
-    '<div>'+
+    var boardID='board_'+idName;
+    console.log(id);
+    var tempBlock='<section class="board-block" id="'+boardID+'">' +
+    '<div>'+id.value+
         '<button onclick="removeCards('+listID+')">Remove Cards</button>'+
-    '</div>'+id.value+
+    '</div>'+
     '<div class="project-block-holder" id='+listID+'>'
     +'</div>'+
 '</section>'
 document.getElementById('boardBlockList').innerHTML+=tempBlock;
 showProjects(listID);
-document.getElementById('menuList').innerHTML+='<li onclick="loadMenu('+listID+')">'+id.value+'<li>';
+document.getElementById('menuList').innerHTML+='<li onclick="loadMenu('+boardID+')">'+id.value+'<li>';
 };
-
-
 
 
 var projectListObject=[                                             
@@ -30,10 +30,10 @@ var projectListObject=[
         name:'Project Noodles'
     }   
 ]; 
-showProjects();
 
 function loadMenu(element){
-    console.log(element.id);     
+    console.log(element.id); 
+    document.getElementById(element.id).style.display='block';    
 }
 
 
@@ -46,12 +46,7 @@ projectListObject.forEach(function(value,index){
             '</ul>'+
             '</div>'+
             '</div>';
-if(listID){
     document.getElementById(listID).innerHTML+=template;
-}
-else{
-  // document.getElementById('projectList').innerHTML+=template;
-}
 });
 
 }
