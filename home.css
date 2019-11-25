@@ -5,7 +5,19 @@ header{
     padding:1%;
     border-radius:10px;
 }
-
+#boardHdr{
+    display:flex;
+    flex-direction:row;
+    justify-content:space-between;
+    font-size: 22px;
+    font-weight: bolder;
+    color: #000;
+    display: flex;
+    margin-top: 3%;
+}
+ #removebtn{
+     background-color:rgb(216, 6, 6);
+    }
 .menu-block{
     padding:160px;
     margin-right:10px;
@@ -16,14 +28,13 @@ header{
 } 
 .project-block-holder{
     display:flex;
-    margin:40px;
     flex-direction: row;
     justify-content: space-between;
 
 }
 .project-block{
+    justify-content:space-between;
     width:300px;
-    margin:10px;
     padding:60px;
     border-radius:8px;
     background-color:lightseagreen;
@@ -55,6 +66,9 @@ button{
     margin-top: 3%;
     display:none;    
 } 
+.board-container{
+    padding:3%;
+}
 .container{
     font-size: 20px;
     font-family: sans-serif;
