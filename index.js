@@ -52,8 +52,8 @@ function showProjects(listID){
 
 projectListObject.forEach(function(value,index){
     var template='<div class="project-block">'+value.name+'<ul>'+
-            '<li>Task one</li>'+
-            '<li>Task two</li>'+
+            '<li class="tasklist">Task one</li>'+
+            '<li class="tasklist">Task two</li>'+
             '</ul>'+
             '</div>'+
             '</div>';
